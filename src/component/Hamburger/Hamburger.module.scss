@@ -1,0 +1,107 @@
+@import '../../../assets/variables.scss';
+
+.hamburger_wrapper{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: $dark-blue;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    transition: all 1s ease-in-out;
+    position: fixed;   
+    z-index: 100;
+    top: 30px;
+    left: 10px;
+    align-self: flex-start;
+}
+
+
+
+.hamburger_first, .hamburger_second, .hamburger_first_active, .hamburger_second_active  {
+    width: 20px;
+    height: 2px;
+    background-color: $beige;
+}
+
+.hamburger_first_active {
+   transform: rotate(45deg);
+
+}
+
+.hamburger_second_active {
+    transform: rotate(-405deg);
+    margin-top: -7px;
+}
+
+.hamburger_list_wrapper {
+    position: fixed;
+    top: 80px;
+    width: calc(100vw - 20px);
+    margin: 0 10px;
+    background-color: $dark-blue;
+    border-radius: $border-radius;
+    padding: 40px 40px;
+    z-index: 100;
+    .list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .item {
+            color: $font-color-white;
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+        }
+    }
+}
+
+@media screen and (min-width: $medium){
+    .hamburger_wrapper{
+        width: 60px;
+        height: 60px;
+        top: 80px;
+        left: 60px;
+    }
+    .hamburger_list_wrapper{ 
+        top: 180px;
+        width: calc(100vw - 120px);
+    }
+    .item{
+        cursor: pointer;
+    }
+
+}
+
+
+@media screen and (min-width: $large){
+    .hamburger_wrapper{
+        width: 60px;
+        height: 60px;
+        top: 80px;
+        left: 80px;
+        cursor: pointer;
+    } 
+    .hamburger_list_wrapper{
+        top: 180px;
+        left: 80px;
+        width: 440px;
+
+        .list {
+            gap: 20px;
+            .item{
+                font-size: 16px;
+            }
+            .item:hover {
+                color:orange; 
+                
+            }
+        }
+    }
+}
+
+

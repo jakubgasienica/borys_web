@@ -1,0 +1,678 @@
+@import '../../../assets/variables.scss';
+
+.home {
+    background-color: $font-color-white;
+}
+
+.header_wrapper {
+    background-color: $beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    height: 70vh;
+    justify-content: center;
+    .reservation {
+        position: fixed;   
+        z-index: 10;
+        top: 30px;
+        right: 10px;
+        background-color: $brown;
+        padding: 10px 10px;
+        border-radius: $border-radius;
+        color: $font-color-white;
+        font-size: 14px;
+    }
+    .page_sentence{
+        font-size: 16px;
+        text-align: center;
+        margin: 0 25px 30px 25px
+    }
+
+    img{
+        width: 150px;
+    }
+}
+
+.first_time {
+    background-color: #FFF;
+    padding: 30px 30px;
+}
+
+.methods {
+    background-color: #4F4740;
+    padding: 30px 30px;
+    color: $font-color-white;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    .methods_button_wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+   
+}
+
+
+.contact {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: $dark-blue;
+    h2{
+        margin-bottom: 5px;
+    }
+    .contact_items{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.price {
+    
+    background-color: $dark-blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px; 
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.office{
+    color: $dark-blue;
+  
+    .office_text_wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+    }
+
+    .office_text{
+        font-size: 14px;
+    }
+
+    .office_item{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 20px;
+    }
+
+    .office_button {
+        align-self: end;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    .office_img {
+        height: 150px;
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 10px;
+    } 
+    
+   
+}
+
+.opinion {
+    font-weight: 300;
+    color: $dark-blue;
+    font-family: 'ManropeMedium';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:15px;
+    margin-bottom:45px ;
+    h2{
+        margin-bottom: 15px;
+    }
+    .opinion_item {
+        margin: 0 40px;
+        background-color: $beige;
+        display: flex;
+       
+        border-radius: 10px;
+        padding: 10px;
+        
+        .opinion_item_text { 
+            display: flex; 
+            flex-direction: column;
+        }
+    }
+    .opinionImg { 
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+}
+
+.about_me{
+    background-color: $light-black;
+    color: $font-color-white;
+    position: relative;
+    padding-bottom: 45px;
+    .profil {
+        height: 280px;
+        width: 100%;
+        object-fit: cover;
+        object-position: 120% 35%;
+        
+    }
+    h2 {
+        text-align: center;
+        margin-top: 30px;
+    }   
+    
+    .about_me_text{
+        padding: 0 30px;
+    }
+    .about_me_descprition{
+        font-size: 14px;
+    }
+    .about_me_button {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 30px;
+        button{
+            color: $font-color-white;
+        }
+    }
+}
+
+.footer {
+    height: 100vh;
+    background-color: $beige;
+    display: flex;
+    flex-direction: column;
+    color: $dark-blue;
+    padding: 0 60px;
+    gap:10px;
+    padding-top: 20px;
+    justify-content: space-around;
+    .top {
+        display: flex;
+        flex-direction: column;
+        .footer_logo {
+            width: 140px;
+            align-self: center;
+            margin-bottom: 20px;
+        }    
+    
+    }
+    
+    .footer_contact{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact_items{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .list {
+        margin-top: 40px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+
+    } 
+    .item {
+            color: $dark-blue;
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+        }  
+
+    .item_politic{
+        color: $dark-blue;
+        font-weight: 500;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .bottom{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap:10px;
+    }
+}
+
+@media only screen and (min-width: $medium) and (max-width: 745px){
+    .header_wrapper {
+        img { 
+            top: 240px !important;
+    }
+}
+}
+
+@media screen and (min-width: $medium) {
+    .header_wrapper {
+        height: 800px;
+        .reservation {
+            top: 80px;
+            right: 60px;
+            padding: 20px 20px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .reservation:hover {
+            background-color: $beige;
+            border: 1px solid $brown;
+            color: $dark-blue;
+        }
+        .page_sentence {
+            font-size: 32px;
+            text-align: start;
+            width: 70vw;
+            margin-top: 300px;
+        }
+        img {
+            width: 230px;
+            position: absolute;
+            top: 280px;
+            left: calc((100vw - 70vw)/2 - 100px);
+        }
+    }
+    .first_time {
+        padding: 40px 80px;
+    }
+    .methods { 
+        padding: 40px 80px;
+        .methods_wrapper{
+            display: flex;
+            flex-direction: column;
+        }
+        .methods_left {
+            max-width: 400px;
+            align-self: center;
+        }
+    }
+    .contact {
+        padding: 40px 80px;
+        margin: 0 10px;
+    }
+    .office {
+        > :not(.office_img_wrapper) { 
+            padding: 0 80px 12px 80px;
+            margin: 0 10px;
+        }
+      
+        .office_img_wrapper{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 2%;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            .office_img{
+                width: 40%;
+                height: 35%;
+                margin-bottom: 0;
+                margin-top: 2%;
+            }
+            
+        }
+    }
+    
+    .price {
+        margin: 50px 90px;
+        padding: 40px
+    }
+    .opinion {
+        padding: 10px 80px 50px 80px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        flex-direction: row;
+        margin-bottom: 0;
+        h2 {
+            width: 100%;
+            margin-bottom: 0;
+        }
+        .opinion_item {
+            margin: 0;
+            gap: 40px;
+            width: calc(40vw - 80px);
+            
+        }
+    }
+    .about_me{
+        display: flex;
+        height: min-content;
+        padding: 0;
+        .profil {
+            width: 45vw;
+            height: 580px;
+            object-fit: cover;
+            object-position: 35%;
+            
+        }
+        h2 {
+            text-align: start;
+            margin-top: 30px;
+        }
+        .name {
+            position: absolute;
+            top: 400px;
+            width: min-content;
+            left: 60px;
+            font-size: 24px;
+            font-weight: 900;
+            z-index: 1;
+        }
+        
+        .about_me_text{
+            margin: 5vw;
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+        }    
+        
+        .about_me_button {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 5vw;
+            margin-top: 30px;
+            button{
+                color: $font-color-white;
+            }
+        }
+    }
+    .footer {
+        height: 400px;
+        background-color: $beige;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $dark-blue;
+        padding: 0 60px;
+        gap:10px;
+        .top { 
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 90vw;
+            .footer_contact{
+                order: 2
+            }
+        }
+        .footer_logo {
+            width: 200px;
+            align-self: center;
+        }
+    
+        .contact_items{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .list {
+            margin-top: 40px;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 0;
+    
+        } 
+        .item {
+                color: $dark-blue;
+                font-weight: 700;
+                font-size: 14px;
+                text-decoration: none;
+                cursor: pointer;
+            }  
+        .bottom {
+            width: 90vw;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (min-width: $large){
+    .home {
+        display: flex;
+        flex-direction: column;
+    }
+    .header_wrapper {
+        height: 800px;
+        justify-content: start;
+        .reservation {
+            top: 80px;
+            right: 80px;
+            padding: 20px 20px;
+            font-size: 16px;
+            font-weight: 700;
+        }     
+        
+        .page_sentence {
+            font-size: 42px;
+            max-width: 800px;
+            text-align: start;
+            position: relative;
+            margin-top: 300px;
+        }
+        img {
+            width: 350px;
+            position: absolute;
+            top: 130px;
+            left: calc((100vw - 1000px)/2 - 70px); 
+            z-index: 1;
+        }
+    }
+
+    .first_time {
+        display: flex;
+        justify-content: center;
+        padding: 60px 80px 70px;
+        h2{
+            align-self: self-start;
+        }
+
+        .first_time_wrapper {
+            width: 1000px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .first_time_content_wrapper{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        h2{ 
+                margin-left: 0;
+        }
+    }
+    .methods { 
+        display: flex;
+        align-items: center;
+        padding: 60px 80px 70px;
+        h2 { 
+            margin-left: calc((100vw - 1000px)/2 - 80px);
+            align-self: flex-start;
+        }
+        .methods_wrapper {
+            width: 1000px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .methods_right {
+                order: 2;
+            }
+            
+            .methods_left {
+                order: 1;
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                justify-content: space-between§;
+                .methods_button_wrapper {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    
+
+    .contact {
+       width: 1000px;
+       align-self: center;
+       padding: 60px 0 70px;
+    }
+    .office { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        .office_text_wrapper{
+            width: 1000px;
+            padding: 0;
+            padding-bottom: 35px;
+        }
+        .office_text {
+            font-size: 16px;
+        }
+        .office_img_wrapper { 
+            .office_img {
+            width: 30%;
+            }
+        }
+       
+    }
+    .opinion {
+        .opinion_item {
+            width: fit-content;
+            padding: 25px 25px;
+            align-items: center;
+        }
+    }
+
+    .price{
+        width: 1000px;
+        align-self: center;
+        margin: 60px 0;
+    }
+    .about_me{
+        display: flex;
+        height: min-content;
+        padding: 0;
+        max-width: 1000px;
+        align-self: center;
+        border-radius: 10px;
+        
+        .profil {
+            width: 500px;
+            height: 100%;
+            object-fit: cover;
+            object-position: 120% 35%;
+            border-top-left-radius:10px ;
+            border-bottom-left-radius:10px ;
+        }
+        h2 {
+            text-align: start;
+        }
+        
+        .about_me_text{
+            margin: 0;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .about_me_descprition{
+                font-size: 16px;
+                max-width: 400px;
+            }
+        }    
+        
+        .about_me_button {
+            display: flex;
+            justify-content: flex-end;
+            align-self: flex-end;
+            margin-top:160px;
+            button{
+                color: $font-color-white;
+            }
+        }
+        .about_me_job {
+            text-align: start;
+        }
+    }
+    .footer {
+        height: 600px;
+        background-color: $font-color-white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $dark-blue;
+        padding: 0 60px;
+        gap:10px;
+        .top { 
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 1100px;
+            margin-top:120px;
+            .footer_contact{
+                order: 2
+            }
+        }
+        .footer_logo {
+            width: 200px;
+            align-self: center;
+        }
+    
+        .contact_items{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .list {
+            margin-top: 40px;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 0;
+    
+        } 
+        .item {
+                color: $dark-blue;
+                font-weight: 700;
+                font-size: 14px;
+                text-decoration: none;
+            }  
+        
+        .item:hover {
+            border-bottom: 1px solid $brown;
+        }
+        
+        .bottom {
+            margin-top: 100px;
+            width: 1000px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+}

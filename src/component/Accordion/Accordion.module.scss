@@ -1,0 +1,69 @@
+@import '../../../assets/variables.scss';
+
+.accordion_title {
+    cursor: pointer;
+    align-self: center;
+}
+
+.accordion_content {
+    margin-top: 10px;
+}
+
+.accordion_with_background, .accordion_no_background, .accordion_with_background_active {
+    margin-bottom: 10px;
+    color: $font-color-white;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 14px;
+}
+
+.accordion_with_background {
+    background-color: $dark-blue;
+    border-radius: $border-radius;
+    padding: 15px 15px;
+}
+
+.accordion_with_background_active { 
+    background-color: transparent;
+    border: solid 1px $dark-blue;
+    border-radius: $border-radius;
+    padding: 15px 15px;
+    color: $dark-blue;
+    
+}
+
+.accordion_no_background {
+    background-color: transparent;
+    color: $font-color-white;
+    padding: 5px 15px;
+}
+
+.button_active_with_background {
+    background-image: url('./Strzalka-02-02.svg');
+    padding: 10px;
+    transform: rotate(90deg);
+    transition:  all 1s ease-in-out;
+}
+.button_with_background {
+    background-image: url('./Strzalka-02_Obszar roboczy 1.svg');
+    padding: 10px;
+    transition:  all 1s ease-in-out;
+}
+.button_active_with_no_background { 
+    background-image: url('./Strzalka-02_Obszar roboczy 1.svg');
+    padding: 10px; 
+    transform: rotate(90deg);
+    transition:  all 1s ease-in-out; 
+}
+.button_no_with_background {
+    background-image: url('./Strzalka-02_Obszar roboczy 1.svg');
+    padding: 10px;
+    transition:  all 1s ease-in-out; 
+}
+
+@media screen and (min-width: $large) {
+    .accordion_no_background, .accordion_with_background_active, .accordion_with_background {
+       width: 400px;
+    }
+}

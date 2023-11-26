@@ -1,0 +1,25 @@
+@import '../../../assets/variables.scss';
+
+.blue, .dark, .light{
+    font-size: $font-size-section-title;
+    font-weight: 900;
+    margin: 0 0px 20px 10px;
+}
+.light {
+    color: $font-color-white;
+}
+
+.dark {
+    color: $black;
+}
+
+.blue {
+    color: $dark-blue;
+    text-align: center;
+}
+
+@media screen and (min-width: $large) {
+    .blue, .dark, .light {
+        font-size: 42px;
+    }
+}

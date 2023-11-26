@@ -1,0 +1,97 @@
+@import '../../../assets/variables.scss';
+
+.description{
+    font-size: $font-size-text;
+}
+
+.contact_value {   
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.contact_subtitle { 
+    font-size: 14px;
+}
+
+.center {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.accordion_description {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: start; 
+    color: $dark-blue;
+    margin: 0 0 30px 10px;
+}
+
+.opinion_description {
+    font-size: 12px;
+}
+
+.opinion_name {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.price_first_description {
+    font-size: 14px;
+    font-weight: 700;
+    color: $font-color-white;
+}
+
+.price_second_description {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: $font-color-white;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.about_me_job {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+@media screen and (min-width: $medium){
+    .about_me_job {
+        font-size: 12px;
+        text-align: start;
+        margin-bottom: 30px;
+        margin-left: 10px;
+    }
+}
+
+
+@media screen and (min-width: $large){
+    .accordion_description {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: start;
+        max-width: 400px;
+        margin: 0;
+    }
+    .contact_value{
+        font-size: 16px;
+    }
+    .contact_subtitle{
+        font-size: 16px;
+    }
+    .opinion_name {
+        font-size: 16px;
+    }
+    .opinion_description {
+        font-size: 16px;
+        max-width: 260px;
+    }
+    .center{
+        text-align: start;
+    }
+    .price_first_description, .price_second_description {
+        font-size: 16px;
+    }
+}

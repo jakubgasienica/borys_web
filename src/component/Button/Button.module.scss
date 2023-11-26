@@ -1,0 +1,49 @@
+@import '../../../assets/variables.scss';
+
+.primary, .primary_light_hover {
+    background-color: $brown;
+    padding: 10px 10px;
+    border-radius: $border-radius;
+    color: $font-color-white;
+    font-size: 14px;
+}
+
+
+.secondary {
+    padding-bottom: 2px; 
+    border-bottom: 1px solid $brown;
+    font-size: 14px;
+    color: $dark-blue;
+}
+
+.secondary:hover{
+    font-weight: 700;
+}
+
+@media screen and (min-width: $medium){
+    .primary, .primary_light_hover {
+        padding: 20px 20px;
+        font-size: 16px;
+        font-weight: 700;
+        border: 1px solid $brown;
+    }     
+    .primary:hover, .primary_light_hover:hover {
+        background-color: transparent;
+        border: 1px solid $brown;
+        color: $dark-blue;
+    }
+    .primary_light_hover:hover {
+        color: $font-color-white;
+    }
+}
+
+@media screen and (min-width: $large){
+    .primary, .primary_light_hover {
+        padding: 20px 20px;
+        font-size: 16px;
+        font-weight: 700;
+    } 
+    .secondary {
+        font-size: 16px;
+    }
+}

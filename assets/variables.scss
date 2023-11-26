@@ -1,0 +1,56 @@
+
+// colors
+$primary-color: #983232;
+$secondary-color: #54a463;
+$dark-blue: #164D9C;
+$font-color-white: #F2F1EC;
+$brown: #B76F43;
+$light-brown: #DECFC1; // background of office
+$black: #201D1D;
+$beige: #F5F5F5;
+$light-black: #414747; // background about me
+$orange: #F18D55;
+
+
+//size
+$border-radius: 10px;
+$margin-bottom : 20px;
+
+//font-size
+$font-size-section-title: 20px;
+$font-size-text: 14px;
+$font-size-button: 14px;
+$font-size-title: 24x;
+
+// media screen
+$medium: 600px;
+$large: 1200px;
+
+//font-family
+
+@font-face{
+    font-family: 'ManropeBold';
+    font-style: bold;
+    font-weight: 700;
+    src: local('Manrope-Bold'), url('./font/Manrope-Bold.ttf'), format('tff')
+}
+
+@font-face{
+    font-family: 'Manrope Extra Bold';
+    font-style: extra-bold;
+    font-weight: 900;
+    src: local('Manrope-ExtraBold'), url('./font/Manrope-ExtraBold.ttf'), format('tff')
+}
+
+@font-face{
+    font-family: 'ManropeMedium';
+    font-style: medium;
+    font-weight: medium;
+    src: local('ManropeMedium'), url('./font/Manrope-Medium.ttf'), format('tff')
+}
+
+
+*{
+    font-family: ManropeMedium;
+    scroll-behavior: smooth;
+}

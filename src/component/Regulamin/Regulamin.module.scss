@@ -1,0 +1,116 @@
+@import '../../../assets/variables.scss';
+
+.button {
+    color: $dark-blue;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button_text:hover{
+    border-bottom: 1px solid $brown;
+}
+
+.ragulamin_text{
+    
+    position: fixed;
+    z-index: 100;
+    top: 3%;
+    left: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 96vw;
+    height: 94%;
+    border-radius: $border-radius;
+    background-color: $dark-blue;
+    color: $beige;
+    padding: 20px;
+    overflow: auto;
+    padding-top: 20px;
+    .list{
+        max-width: 800px;
+        list-style-type: upper-greek;
+        font-size: 12px;
+        padding-left: 15px;
+        .list_inner{
+            list-style-type: lower-latin;
+            font-size: 12px;
+            padding-left: 15px;
+        }
+    }
+}
+
+.subtitle { 
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.subtitle_right {
+    font-size: 14px;
+    text-align: end;
+}
+
+.text { 
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-align: start;
+}
+
+.text_borys{
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.subtitle_wrapper{
+    margin-top: 20px;
+}
+.button_close_wrapper{
+    align-self: self-start;
+    position: fixed;
+    
+}
+
+.button_close {
+    width: 40px;
+    height: 40px; 
+    margin-top: 0px;
+    background-color: $dark-blue;
+    border-radius: $border-radius;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    
+    cursor: pointer;
+    .button_close_first, .button_close_second {
+        width: 20px;
+        height: 2px;
+        background-color: $beige;
+    }
+    .button_close_second{
+        transform: translateY(20px) rotate(45deg);
+        margin-top: -7px;
+    }
+
+    .button_close_first{
+        transform: translateY(20px) rotate(-405deg);
+    
+    }
+}
+table, td, th {
+    border: 1px solid $beige;
+}
+table{
+    max-width: 800px;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+th{
+    min-width: 20px;
+}
