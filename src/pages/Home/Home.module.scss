@@ -159,10 +159,10 @@
     position: relative;
     padding-bottom: 45px;
     .profil {
-        height: 280px;
+        height: 300px;
         width: 100%;
         object-fit: cover;
-        object-position: 120% 35%;
+        object-position: 100% 20%;
         
     }
     h2 {
@@ -607,7 +607,8 @@
             display: flex;
             justify-content: flex-end;
             align-self: flex-end;
-            margin-top:160px;
+            margin-top: 60px;
+            margin-right: 0;
             button{
                 color: $font-color-white;
             }

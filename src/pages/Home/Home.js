@@ -8,7 +8,7 @@ import { useRef } from "react";
 import css from './Home.module.scss'
 import Hamburger from "../../component/Hamburger/Hamburger";
 import img from "./logo_borys.png"
-import profil from "./profilowe.jpeg"
+import profil from "./profilowe.jpg"
 
 function Home () {
     const { home } = useHome()
@@ -105,7 +105,7 @@ function Home () {
                 </div>
             
         
-                <p className={css.office_text}><b>Wejście do gabinetu</b> Przy bramce wejściowej wybieramy numer 97, następnie przechodzimy przez dziedziniec i podążając na wprost kierujemy się do klatki po prawej stronie. Na domofonie wybieramy numer 97.  </p>
+                <p className={css.office_text}><b>Wejście do gabinetu</b> Przy bramce wejściowej wybieramy numer 97, następnie przechodzimy przez dziedziniec i podążając na wprost kierujemy się do <b>klatki A</b> po prawej stronie. Na domofonie wybieramy numer 97.  </p>
                 <p className={css.office_text}><b>Parking dla pacjentów</b> znajduje się przy ulicy na wprost budynku i leż yw podstrefie C </p>
 
                 <div className={css.office_button}>
