@@ -22,7 +22,14 @@ function Text ({text, type}) {
         typeClass = 'price_second_description'
     } else if (type === 'about_me_job') {
         typeClass = 'about_me_job'
+    } else if (type === 'news_title') {
+        typeClass = 'news_title'
+    } else if (type === 'news_text') {
+        typeClass = 'news_text'
+    } else if (type === 'news_date') {
+        typeClass = 'news_date'
     }
+
 
     return (<p className={css[typeClass]}>{text}</p>)
 }

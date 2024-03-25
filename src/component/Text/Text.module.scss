@@ -56,6 +56,18 @@
     margin-bottom: 30px;
 }
 
+.news_title{
+    font-weight: 900;
+}
+
+.news_date{
+    margin-top: auto;
+    font-size: 12px;
+}
+
+.news_text{
+    font-size: 14px;
+}
 
 @media screen and (min-width: $medium){
     .about_me_job {
@@ -64,8 +76,7 @@
         margin-bottom: 30px;
         margin-left: 10px;
     }
-}
-
+} 
 
 @media screen and (min-width: $large){
     .accordion_description {

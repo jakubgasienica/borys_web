@@ -17,8 +17,11 @@ function Home () {
     const accordionWithoutBackgound = handleCheckSection(home, 'accordioNoBackground')
     const imgOffice = handleCheckSection(home, 'imgOffice')
     const opinionRes = handleCheckSection(home, 'opinion')
-
+    const priceSection = handleCheckSection(home, 'priceSection')
+    const newsRes = handleCheckSection(home, 'news');
+    console.log(newsRes)
     const firstTime = useRef(null);
+    const news = useRef(null);
     const methods = useRef(null);
     const contact = useRef(null);
     const office = useRef(null);
@@ -36,7 +39,7 @@ function Home () {
     return (
     <div className={css.home}>
         <section className={css.header_wrapper}>
-            <Hamburger className={css.hamburger} firstTime={firstTime} methods={methods} contact={contact} office={office} price={price} opinion={opinion} aboutMe={aboutMe}></Hamburger>
+            <Hamburger className={css.hamburger} news={news} firstTime={firstTime} methods={methods} contact={contact} office={office} price={price} opinion={opinion} aboutMe={aboutMe}></Hamburger>
             <a href="https://zarejestrowani.pl/w/A1u2sRPkvIssJMkd0sIibw/?fbclid=IwAR3ciGKq1X7VXpySF75i8F5S6Q433oMlZ5f0wA1uQD4zXaSnHIcidnq4D7k"><button className={css.reservation}>umów wizytę</button></a>
         
             <img src={img} className="logo"></img>
@@ -46,10 +49,25 @@ function Home () {
             <a href="#methods"><Button type='secondary' text='dowiedz się więcej'></Button></a>        
         </section>
 
+        <section id='news' className={css.news}>
+            <div className={css.news_container_section}> 
+                <SectionTitle text='Aktualności' type='dark'></SectionTitle>
+                <div className={css.news_container_items}>
+                    {newsRes?.map((field)=>(
+                    <div className={css.news_item}>
+                        <Text text={field.fields.title} type='news_title'></Text>
+                        <Text text={field.fields.text} type='news_text'></Text>
+                        <Text text={field.fields.date} type='news_date'></Text>
+                    </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
         <section id='first_time' className={css.first_time} ref={firstTime}>
-            <div className={css.first_time_wrapper}><SectionTitle text='Pierwsza wizyta' type='dark'></SectionTitle>
-                <div className={css.first_time_content_wrapper}>
-                    
+            <div className={css.first_time_wrapper}>
+                <SectionTitle text='Pierwsza wizyta' type='dark'></SectionTitle>
+                <div className={css.first_time_content_wrapper}>    
                     <Text text='Podczas pierwszej wizyty ocenię twoją postawę, zbadam miejsca które sprawiają dolegliwości, a także te, które mogą być z nimi powiązane. Zbiorę wszystkie informacje, które mogą mieć wpływ na twoje dolegliwości - aktualne oraz przeszłe. Zapytam Cię o urazy, zabiegi operacyjne, przebyte choroby.' type='accordionDescription'></Text>
                     <div>
                     {accordionWithBackgound?.map((fields)=>(
@@ -121,9 +139,16 @@ function Home () {
         </section>
         
         <section id='price' className={css.price} ref={price}>
-            <SectionTitle type='light' text='Cennik'></SectionTitle>
-            <Text type='priceFirstDescription' text='1 Wizyta - 150 zł'></Text>
-            <Text type='priceSecondDescription' text='(diagnostyka funkcjonalna, terapia, ćwiczenia, zalecenia)'></Text>
+                {priceSection?.map((fields)=>(
+                <div>
+                    <SectionTitle type='light' text='Cennik'></SectionTitle>
+                    <Text type='priceFirstDescription' text={fields.fields.firstRow}></Text>
+                    <Text type='priceSecondDescription' text={fields.fields.secondRow}></Text>
+                </div>
+             )   
+            )}
+            {/* <Text type='priceFirstDescription' text={priceSection[0].firstRow}></Text>
+            <Text type='priceSecondDescription' text={priceSection[0].secondRow}></Text> */}
         </section>
 
         <section id='opinion' className={css.opinion} ref={opinion}>
@@ -184,7 +209,7 @@ function Home () {
 
             <div className={css.bottom}>
                 <Regulamin></Regulamin>
-                <p className={css.item_politic}>2023 © witkiewiczfizjoterapia.pl</p>
+                <p className={css.item_politic}>2024 © witkiewiczfizjoterapia.pl</p>
             </div>
         </footer>
     </div>

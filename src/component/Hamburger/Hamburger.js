@@ -1,7 +1,7 @@
 import css from './Hamburger.module.scss'
 import { useState } from "react"
 
-function Hamburger ({firstTime, methods, contact, office, price, opinion, aboutMe}) {
+function Hamburger ({news, firstTime, methods, contact, office, price, opinion, aboutMe}) {
     const [isActive, setIsActive] = useState(false);
 
     let hamburgerFirst='';
@@ -29,6 +29,8 @@ function Hamburger ({firstTime, methods, contact, office, price, opinion, aboutM
 
         {isActive && <div className={css.hamburger_list_wrapper}>
             <ul className={css.list}>
+                <li onClick={()=>{scrollToSection(news);
+                    setIsActive(!isActive)}} className={css.item} >Aktualności</li>
                 <li onClick={()=>{scrollToSection(firstTime);
                     setIsActive(!isActive)}} className={css.item} >Pierwsza wizyta</li>
                 <li onClick={()=>{scrollToSection(methods);
